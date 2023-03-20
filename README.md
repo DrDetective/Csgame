@@ -1,5 +1,5 @@
 # Wanderer's tale
-## 1.5.0 ??
+## 1.0.0 version
 Console story game
 
 Coded in 40h
