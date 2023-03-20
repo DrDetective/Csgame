@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using CsGame;
+using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Net.Sockets;
 using System.Runtime.CompilerServices;
@@ -14,45 +15,20 @@ int enemyAttack;
 int healAmount = 5;
 int mana = 0;
 int lvl = 1;
-//List<string> inventory = new List<string>();
 
-//List<string> endings = new List<string>();
 
-List<string> itemspyra = new List<string>();
-itemspyra.Add("Hay");
-itemspyra.Add("Iron bar");
-itemspyra.Add("Brozne bar");
-itemspyra.Add("Bricks");
 Random randNum = new Random();
-int aRandomPos = randNum.Next(itemspyra.Count);
-string itemspyramid = itemspyra[aRandomPos];
+int aRandomPos = randNum.Next(Lists.itemspyramid.Count);
+string itemspyramid = Lists.itemspyramid[aRandomPos];
 
-List<string> firstNames = new List<string>();
-firstNames.Add("Rocks");
-firstNames.Add("Rope");
-firstNames.Add("Small chunks of wood");
-firstNames.Add("Glass");
-firstNames.Add("Cloth");
 Random randNum2 = new Random();
 int aRandomPos2 = randNum.Next(firstNames.Count);
 string Desert = firstNames[aRandomPos];
 
-List<string> firstNames2 = new List<string>();
-firstNames2.Add("ENERGYSWORD");
-firstNames2.Add("HL");
-firstNames2.Add("FSBERSERK");
-firstNames2.Add("ZENITH");
-firstNames2.Add("BLOODMOON");
-firstNames2.Add("PLEB");
-firstNames2.Add("TENSAZANGETSU");
-firstNames2.Add("kamonevim");
 Random randNum3 = new Random();
 int aRandomPos3 = randNum3.Next(firstNames2.Count);
 string codes = firstNames2[aRandomPos];
 
-List<string> firstNames3 = new List<string>();
-firstNames3.Add("Snake");
-firstNames3.Add("Scorpion");
 Random randNum4 = new Random();
 int aRandomPos4 = randNum4.Next(firstNames3.Count);
 string desertene = firstNames3[aRandomPos4];
@@ -158,10 +134,10 @@ if (option == 2)
 } //CREDITS
 if (option == 3)
 {
-    Console.WriteLine("Here you can enter codes to make your game easier or harder\nCodes can be found in game\nEnter codes with Capslock on");
     while (true)
     {
         string code = Console.ReadLine();
+        code = code.ToUpper();
         if (code == "ENERGYSWORD") //HALO
         {
             Console.WriteLine("Congrats, you gained Energy Sword\n\r|------------------------------|\n\r| Item: Energy Sword           |\n\r|                              |\n\r| Damage: 175                  |\n\r| Critical Damage: 300-505     |\n\r| Speed: Fast                  |\n\r|------------------------------|");
@@ -178,7 +154,7 @@ if (option == 3)
         {
             Console.WriteLine("Congrats, you gained Zenith\n\r|------------------------------|\n\r| Item: Zenith                 |\n\r|                              |\n\r| Damage: 375                  |\n\r| Critical Damage: 560-739     |\n\r| Speed: Very fast             |\n\r|------------------------------|");
         }
-        else if (code == "MASTERKEY") //EVERTHING FROM HERE NAD ALL ENDINGS
+        else if (code == "MASTERKEY") //EVERTHING FROM HERE AND ALL ENDINGS
         {
             Console.WriteLine("Congrats, you gained everything from codes\n\r|------------------------------|\n\r| Item: Energy Sword           |\n\r|                              |\n\r| Damage: 175                  |\n\r| Critical Damage: 300-505     |\n\r| Speed: Fast                  |\n\r|------------------------------|\n\r|------------------------------|\n\r| Item: Crowbar                |\n\r|                              |\n\r| Damage: 75                   |\n\r| Critical Damage: 80-100      |\n\r| Speed: Average               |\n\r|------------------------------|\n\r|------------------------------|\n\r| Item: Berserk Armor          |\n\r|                              |\n\r| Defence: 300                 |\n\r| Durability: 2000/2000        |\n\r| Skill: Berserk Mode          |\n\r|------------------------------|\n\r|                              |\n\r|------------------------------|\n\r| Item: Dragon Slayer          |\n\r|                              |\n\r| Damage: 300                  |\n\r| Critical Damage: 600-850     |\n\r| Speed: Slow                  |\n\r|------------------------------|\n\r|------------------------------|\n\r| Item: Zenith                 |\n\r|                              |\n\r| Damage: 375                  |\n\r| Critical Damage: 560-739     |\n\r| Speed: Very fast             |\n\r|------------------------------|\n\r|------------------------------|\n\r| Item: Tensa Zangetsu         |\n\r|                              |\n\r| Damage: 250                  |\n\r| Critical Damage: 369-576     |\n\r| Speed: Fast                  |\n\r|                              |\n\r| Skill: Bankai                |\n\r| + 15% Speed Boost            |\n\r| + 50% Damage                 |\n\r|                              |\n\r| Skill 2: Getsuga Tensho      |\n\r|------------------------------|");
         }
@@ -341,7 +317,6 @@ if (option1 == 1)
             sanceH3 = randomEXPL.Next(0, 2);
             if (sanceH3 == 0)
             {
-                endings.Add("Living Hell");
                 Console.WriteLine("You found a mysterious portal\n\rAs you go closer you become more curious to know whats in there");
                 Thread.Sleep(3750);
                 Console.Clear();

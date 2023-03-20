@@ -3,58 +3,46 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
-//FIX LIST IF POSSIBLE OR FIND A WAY TO MAKE THIS WORK
-
-
 namespace CsGame
 {
     internal class Lists
     {
-        private List<string> inventory = new List<string>();
+         
+               public static List<string> inventory = new List<string>();
+               public static List<string> endings = new List<string>();
+               public static List<string> itemspyramid = new List<string>();
+               public static List<string> firstNames = new List<string>();
+               public static List<string> firstNames2 = new List<string>();
+               public static List<string> firstNames3 = new List<string>();
 
-        private List<string> endings = new List<string>();
+        public Lists()
+        {
+            endings.Add("test");
 
-        private List<string> itemspyra = new List<string>();
-        public List<string> GetList();
-        itemspyra.Add("Hay");
-        itemspyra.Add("Iron bar");
-        itemspyra.Add("Brozne bar");
-        itemspyra.Add("Bricks");
-        Random randNum = new Random();
-        int aRandomPos = randNum.Next(itemspyra.Count);
-        string itemspyramid = itemspyra[aRandomPos];
-        return itemspyra;
+            itemspyramid.Add("Hay");
+            itemspyramid.Add("Iron bar");
+            itemspyramid.Add("Brozne bar");
+            itemspyramid.Add("Bricks");
 
-        List<string> firstNames = new List<string>();
-        firstNames.Add("Rocks");
-        firstNames.Add("Rope");
-        firstNames.Add("Small chunks of wood");
-        firstNames.Add("Glass");
-        firstNames.Add("Cloth");
-        Random randNum2 = new Random();
-        int aRandomPos2 = randNum.Next(firstNames.Count);
-        string Desert = firstNames[aRandomPos];
+            firstNames.Add("Rocks");
+            firstNames.Add("Rope");
+            firstNames.Add("Small chunks of wood");
+            firstNames.Add("Glass");
+            firstNames.Add("Cloth");
 
-        List<string> firstNames2 = new List<string>();
-        firstNames2.Add("ENERGYSWORD");
-        firstNames2.Add("HL");
-        firstNames2.Add("FSBERSERK");
-        firstNames2.Add("ZENITH");
-        firstNames2.Add("BLOODMOON");
-        firstNames2.Add("PLEB");
-        firstNames2.Add("TENSAZANGETSU");
-        firstNames2.Add("kamonevim");
-        Random randNum3 = new Random();
-        int aRandomPos3 = randNum3.Next(firstNames2.Count);
-        string codes = firstNames2[aRandomPos];
+            firstNames2.Add("ENERGYSWORD");
+            firstNames2.Add("HL");
+            firstNames2.Add("FSBERSERK");
+            firstNames2.Add("ZENITH");
+            firstNames2.Add("BLOODMOON");
+            firstNames2.Add("PLEB");
+            firstNames2.Add("TENSAZANGETSU");
+            firstNames2.Add("kamonevim");
 
-        List<string> firstNames3 = new List<string>();
-        firstNames3.Add("Snake");
-        firstNames3.Add("Scorpion");
-        Random randNum4 = new Random();
-        int aRandomPos4 = randNum4.Next(firstNames3.Count);
-        string desertene = firstNames3[aRandomPos4];
+            firstNames3.Add("Snake");
+            firstNames3.Add("Scorpion");
+        }
+        
     }
 }
 
