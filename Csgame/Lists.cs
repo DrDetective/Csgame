@@ -11,12 +11,10 @@ namespace CsGame
 {
     internal class Lists
     {
-        private List<string> inventory = new List<string>();
+        public List<string> inventory = new List<string>();
 
-        private List<string> endings = new List<string>();
-
-        private List<string> itemspyra = new List<string>();
-        public List<string> GetList();
+        public List<string> endings = new List<string>();
+        public List<string> itemspyra();
         itemspyra.Add("Hay");
         itemspyra.Add("Iron bar");
         itemspyra.Add("Brozne bar");
